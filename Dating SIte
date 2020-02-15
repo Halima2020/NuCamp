@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        fieldset {
+            background-color:lightyellow; border:10px solid yellow; margin-bottom:10px; width: 720px;
+            }
+            label {width: 180px; display: inline-block; text-align: right; vertical-align: top; }
+            label:hover { font-size:40px }
+            label[for="checkbox"] { width: auto;}
+            label[for="radio"] { width: auto;}
+            input:hover { font-size:40px }
+            .week { display: inline-block; width: 60px; text-align: center; background-color: red; color: white;}
+            .week2 { display: inline-block; width: 60px; text-align: center; background-color: purple; color: white;}  
+
+        </style>
+    </head>
+<body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+<form action="https://learn.nucamp.co/show_everything.php" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <legend>Your Face</legend>
+    <label>Your Image:</label>
+    <input type="file" [required] name="avatar" id="avatar">
+    <br>
+    <label id="preview">Image Preview:</label>
+  </fieldset>
+  <fieldset>
+    <legend>Your General Details</legend>
+    <label>Name:</label>
+    <input type="text" [required] name="name" id="name" placeholder="Your Full Name">
+    <br>
+    <label>Gender:</label>
+    <input type="radio" [required] name="gender" id="male" value="male">
+    Male
+    <input type="radio" [required] name="gender" id="female" value="female">
+    Female<br>
+    <label>Age:</label>
+    <input type="number" [required] name="age" id="age"><br>
+    <label>Date of Birth:</label>
+    <input type="date" name="dob" placeholder="dd/mm/yyyy"><br>
+    <label>Color:</label>
+    <input type="color" name="color" id="color">
+    <br>
+    <label>Which Country:</label>
+    <select>
+        <option value="No Selection">No Selection</option>
+        <option value="Italy">Italy</option>
+        <option value="Mexico">Mexico</option>
+        <option value="France">France</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Egypt">Egypt</option>
+    </select>
+    <br>
+  </fieldset>
+  <fieldset>
+    <legend>Your Indicators</legend>
+    <label>Height:</label>
+    <span class="week">Short</span>
+   <input type="range" min="0" max="100" >
+    <span class="week2">Tall</span> <br>
+    <label>Salary:</label>
+    <span class="week">Poor</span>
+    <input type="range" min="0" max="100" >
+    <span class="week2">Rich</span> <br>
+    <br>
+  </fieldset>
+  <fieldset>
+    <legend>Your Contact Information</legend>
+    <label>Email:</label>
+    <input type="email" [required] name="email" id="email"><br>
+    <label>Mobile:</label>
+    <input type="tel" name="mobile" id="mobile"><br>
+      <label>Address:</label>
+      <textarea name="address" id="address" cols="20" rows="3"></textarea><br>
+      <label>Method contact you:</label>
+      <input type="checkbox"><label for="checkbox">Email</label>
+     <input type="checkbox"><label for="checkbox">Whatsapp</label>
+      <input type="checkbox"><label for="checkbox">In-app chat</label>
+  </fieldset>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<script src="https://url.nucamp.co/datingjs"></script>
+</body>
+</html>
